@@ -97,7 +97,7 @@ kubectl get nodes
 ```
 
 If using EC2 and getting the "You must be logged in to the server (Unauthorized)" error, refer this: https://repost.aws/knowledge-center/eks-api-server-unauthorized-error
-Or better still, go to your AWS Management Console, navigate to EC2 interface and open the AWS-CLI interface by clicking on the shell icon at the top right conner of your AWS portal.
+.(second option) Or better still, go to your AWS Management Console, navigate to EC2 interface and open the AWS-CLI interface by clicking on the shell icon at the top right conner of your AWS portal.
 run the following command on the opened shell interface
 ```
 kubectl edit configmap aws-auth --namespace kube-system
@@ -119,6 +119,7 @@ mapRoles: |
     groups:
       - system:masters
 ```
+Now, return to your instance's CLI.
 
 Clone the github repo.
 
