@@ -103,15 +103,15 @@ run the following command on the opened shell interface
 kubectl edit configmap aws-auth --namespace kube-system
 ```
 edit the configmap file:
-Using an IAM-user 
+Using an IAM-user
 ```
 mapUsers: |
   - userarn: arn:aws:iam::XXXXXXXXXXXX:user/testuser
     username: XXXXXXXXX {Type your username}
     groups:
       - system:masters
-``
-Or using the IAM-Role create earlier
+```
+Or using the IAM-Role create earlier.
 ```
 mapRoles: |
   - rolearn: arn:aws:iam::XXXXXXXXXXXX:role/testrole
@@ -120,7 +120,8 @@ mapRoles: |
       - system:masters
 ```
 
-Clone the github repo
+Clone the github repo.
+
 ```
 git clone https://github.com/ambefrank/K8s-Voting-app-project.git
 ```
